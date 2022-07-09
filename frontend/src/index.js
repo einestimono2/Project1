@@ -19,7 +19,7 @@ const options = {
 
 root.render(
   <Provider store={store}>
-    <AlertProvider template={AlertTemplate} {...options} zindex={9999}>
+    <AlertProvider template={AlertTemplate} {...options}>
       <App />
     </AlertProvider>
   </Provider>
