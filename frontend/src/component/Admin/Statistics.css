@@ -1,0 +1,63 @@
+.statisticTitle {
+  /* padding: 0 3vmax; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+
+.statisticTitle > label {
+  width: 15vmax;
+  margin-right: 3vmax;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.statisticTitle > label > select {
+  width: 100%;
+}
+
+.statisticTitle > div {
+  text-align: center;
+  width: 9vmax;
+  /* height: 50%; */
+  padding: 1.5vh 0;
+  border-radius: 0.25vmax;
+  color: white;
+  background-color: rgb(29, 180, 231);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.statisticTitle > div:not(:last-child):hover {
+  background-color: rgb(30, 133, 168);
+}
+
+.statisticTitle > div:last-child {
+  margin-left: 1vmax;
+  background-color: rgb(96, 127, 34);
+}
+
+.statisticTitle > div:last-child:hover {
+  background-color: rgb(136, 184, 39);
+}
+
+.statisticTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1.5vmax;
+  height: 5vh;
+}
+
+.statisticTotal > div {
+  width: 20%;
+  display: block;
+  justify-content: center;
+  font: bold 1vmax "Roboto";
+  color: crimson;
+  background-color: aquamarine;
+  text-align: center;
+  padding: 0.75vmax 0;
+}
