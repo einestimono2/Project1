@@ -173,7 +173,7 @@ const RoomDetails = () => {
                 {room.images &&
                   room.images.map((item, i) => (
                     <SwiperSlide key={i}>
-                      <img src={item.url} alt={`img ${i}`} />
+                      <img src={item?.url} alt={`img ${i}`} />
                     </SwiperSlide>
                   ))}
               </Swiper>
@@ -181,8 +181,8 @@ const RoomDetails = () => {
 
             <div className="containerPosterInfor">
               <h1>NGƯỜI ĐĂNG</h1>
-              <img src={room.user?.avatar.url} alt="" />
-              <div className="posterName">{room.user?.name}</div>
+              <img src={room.user?.avatar?.url || "/Profile.png"} alt="" />
+              <div className="posterName">{room.user?.name || "Anonymous"}</div>
 
               <a
                 className="contact posterPhoneNumber"
@@ -298,7 +298,7 @@ const RoomDetails = () => {
                 <tbody>
                   <tr>
                     <th>Liên hệ</th>
-                    <td>{room.user?.name}</td>
+                    <td>{room.user?.name || "-"}</td>
                   </tr>
                   <tr>
                     <th>Email</th>
@@ -306,11 +306,11 @@ const RoomDetails = () => {
                   </tr>
                   <tr>
                     <th>Điện thoại</th>
-                    <td>{room.user?.phoneNumber}</td>
+                    <td>{room.user?.phoneNumber || "-"}</td>
                   </tr>
                   <tr>
                     <th>Zalo</th>
-                    <td>{room.user?.phoneNumber}</td>
+                    <td>{room.user?.phoneNumber || "-"}</td>
                   </tr>
                 </tbody>
               </table>

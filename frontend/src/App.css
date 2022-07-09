@@ -34,3 +34,7 @@ button {
 .orange_color {
   color: orange !important;
 }
+
+.leaflet-pane {
+  z-index: 100;
+}
