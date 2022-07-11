@@ -78,11 +78,13 @@ const RoomDetails = () => {
   }, [alert, dispatch, error, id, reviewError, success]);
 
   const submitReviewToggle = () => {
-    if (user._id === room.user?._id) {
+    if (!user) {
+      alert.error("Đăng nhập để đánh giá!");
+      return;
+    } else if (user._id === room.user?._id) {
       alert.error("Không thể tự đánh giá phòng của chính mình !");
       return;
-    }
-    open ? setOpen(false) : setOpen(true);
+    } else open ? setOpen(false) : setOpen(true);
   };
 
   const reviewSubmitHandler = () => {

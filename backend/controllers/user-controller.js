@@ -178,16 +178,17 @@ exports.updatePassword = catchAsyncError(async (req, res, next) => {
 // Update profile
 exports.updateProfile = catchAsyncError(async (req, res, next) => {
   const newProfile = {
-    name: req.body.name,
     email: req.body.email,
-    phoneNumber: req.body.phoneNumber,
   };
+
+  if (req.body.name) newProfile.name = req.body.name;
+  if (req.body.phoneNumber) newProfile.phoneNumber = req.body.phoneNumber;
 
   if (req.body.avatar !== "") {
     const user = await User.findById(req.user.id);
 
     const imgID = user.avatar.public_id;
-    await cloudinary.v2.uploader.destroy(imgID);
+    if (imgID) await cloudinary.v2.uploader.destroy(imgID);
 
     const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
       folder: "avatars",

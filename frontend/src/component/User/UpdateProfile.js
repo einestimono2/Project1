@@ -27,15 +27,15 @@ const UpdateProfile = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [avatarPreview, setAvatarPreview] = useState("./Profile.png");
+  const [avatarPreview, setAvatarPreview] = useState("");
 
   const updateProfileSubmit = (e) => {
     e.preventDefault();
 
     const myForm = new FormData();
 
-    myForm.set("name", name);
-    myForm.set("phoneNumber", phoneNumber);
+    name !== "" && myForm.set("name", name);
+    phoneNumber !== "" && myForm.set("phoneNumber", phoneNumber);
     myForm.set("email", email);
     myForm.set("avatar", avatar);
 
@@ -60,7 +60,7 @@ const UpdateProfile = () => {
       if (user.name !== "undefined") setName(user.name);
       if (user.phoneNumber !== "undefined") setPhoneNumber(user.phoneNumber);
       setEmail(user.email);
-      if (user.avatar?.url !== undefined) setAvatarPreview(user.avatar.url);
+      if (user.avatar?.url) setAvatarPreview(user.avatar.url);
     }
 
     if (error) {

@@ -43,7 +43,14 @@ function Header({ user }) {
   }
 
   function post() {
-    if (user.name === undefined && user.phoneNumber === undefined) {
+    if (
+      user.name === undefined ||
+      user.phoneNumber === undefined ||
+      user.name === "undefined" ||
+      user.phoneNumber === "undefined" ||
+      !user.name ||
+      !user.phoneNumber
+    ) {
       alert.error("Cần cập nhật họ tên và SĐT trước khi đăng tin !");
       return;
     }
