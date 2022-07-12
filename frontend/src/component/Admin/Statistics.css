@@ -47,29 +47,30 @@
   width: 100%;
 }
 
-.statisticTitle > div > div {
+.statisticTitle > div > button {
   text-align: center;
   width: 9vmax;
   margin-top: 1vh;
-  height: 20%;
-  padding: 2vh 0;
+  height: 60%;
+  padding: 1.65vh 0;
   border-radius: 0.5vmax;
   color: white;
   background-color: rgb(29, 180, 231);
   cursor: pointer;
   transition: all 0.5s;
+  font: 500 1vmax "Roboto";
 }
 
-.statisticTitle > div > div:not(:last-child):hover {
+.statisticTitle > div > button:not(:last-child):hover {
   background-color: rgb(30, 133, 168);
 }
 
-.statisticTitle > div > div:last-child {
+.statisticTitle > div > button:last-child {
   margin-left: 1vmax;
   background-color: rgb(96, 127, 34);
 }
 
-.statisticTitle > div > div:last-child:hover {
+.statisticTitle > div > button:last-child:hover {
   background-color: rgb(136, 184, 39);
 }
 
@@ -114,8 +115,9 @@
     font: 500 1.35vmax cursive;
   }
 
-  .statisticTitle > div > div {
+  .statisticTitle > div > button {
     font: 600 1.5vmax "Roboto";
-    height: 22%;
+    padding: 1vh 0;
+    height: 80%;
   }
 }

@@ -4,6 +4,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { DataGrid } from "@material-ui/data-grid";
 import { useAlert } from "react-alert";
+import { Button } from "@material-ui/core";
 
 import ExcelJs from "exceljs";
 
@@ -34,10 +35,14 @@ const Statistics = () => {
   const [show, setShow] = useState(false);
   const [rows, setRows] = useState([]);
 
-  const { rooms } = useSelector((state) => state.rooms);
-  const { users } = useSelector((state) => state.users);
+  const { loading: roomsLoading, rooms } = useSelector((state) => state.rooms);
+  const { loading: usersLoading, users } = useSelector((state) => state.users);
   const { user } = useSelector((state) => state.user);
-  const { bookings, totalAmount } = useSelector((state) => state.bookings);
+  const {
+    loading: bookingsLoading,
+    bookings,
+    totalAmount,
+  } = useSelector((state) => state.bookings);
 
   useEffect(() => {
     if (statistic === "") return;
@@ -765,9 +770,33 @@ const Statistics = () => {
             </div>
 
             <div>
-              <div onClick={statisticHandler}>Thống kê</div>
+              <Button
+                onClick={statisticHandler}
+                disabled={
+                  roomsLoading ||
+                  usersLoading ||
+                  bookingsLoading ||
+                  statistic === ""
+                    ? true
+                    : false
+                }
+              >
+                Thống kê
+              </Button>
 
-              <div onClick={exportHandler}>Xuất Excel</div>
+              <Button
+                onClick={exportHandler}
+                disabled={
+                  roomsLoading ||
+                  usersLoading ||
+                  bookingsLoading ||
+                  statistic === ""
+                    ? true
+                    : false
+                }
+              >
+                Xuất Excel
+              </Button>
             </div>
           </div>
 
