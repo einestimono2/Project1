@@ -58,9 +58,9 @@ const Home = () => {
               </div>
             ) : (
               <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                slidesPerGroup={4}
+                slidesPerView={window.innerWidth < 600 ? 2 : 4}
+                spaceBetween={window.innerWidth < 600 ? 0 : 20}
+                slidesPerGroup={window.innerWidth < 600 ? 2 : 4}
                 pagination={{
                   clickable: true,
                 }}

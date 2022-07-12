@@ -64,3 +64,13 @@
 .MuiDataGrid-root {
   margin-bottom: 1vmax;
 }
+
+@media screen and (max-width: 600px) {
+  #roomListHeading {
+    font: 400 1.5rem "Roboto";
+  }
+
+  .roomListTable div {
+    font: 300 4vw "Roboto";
+  }
+}

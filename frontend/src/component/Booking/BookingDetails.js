@@ -107,10 +107,14 @@ const BookingDetails = () => {
                         <Link to={`/room/${booking.room?._id}`}>
                           Mã phòng: {booking.room?._id}
                         </Link>
-                        <span>{`Địa chỉ: ${booking.room?.address}`}</span>
-                        <span>{`Giá: ${booking.room?.price?.toLocaleString(
-                          "en-US"
-                        )} VNĐ`}</span>
+                        {window.innerWith >= 600 && (
+                          <span>{`Địa chỉ: ${booking.room.address}`}</span>
+                        )}
+                        {window.innerWith >= 600 && (
+                          <span>{`Giá: ${booking.room.price?.toLocaleString(
+                            "en-US"
+                          )} VNĐ`}</span>
+                        )}
                       </div>
                     </div>
                   </div>

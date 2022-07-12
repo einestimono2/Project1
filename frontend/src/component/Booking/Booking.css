@@ -174,3 +174,58 @@
   background-color: rgb(179, 66, 46);
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 600px) {
+  .bookingContainer {
+    min-height: 80vh;
+    width: 99%;
+  }
+
+  .bookingHeading {
+    font: 700 2vmax "Roboto";
+    width: 40%;
+    margin-top: 3vmax;
+  }
+
+  .bookingRoomHeader {
+    width: 100%;
+    font: 300 1.3vmax "Roboto";
+    margin: 2vmax auto;
+  }
+
+  .bookingRoomContainer {
+    margin: 0 auto 5vmax auto;
+  }
+
+  .CartItemCard {
+    padding: 1vmax;
+  }
+
+  .CartItemCard > div {
+    margin: 0vmax 1vmax;
+  }
+
+  .CartItemCard > div > a {
+    font: bold 1.4vmax cursive;
+  }
+
+  .bookingNumOfRooms > button {
+    padding: 0.5vmax;
+    width: 2vmax;
+    font-size: 1.3vmax;
+  }
+
+  .bookingNumOfRooms > input {
+    width: 2vmax;
+    padding: 1vmax;
+    font: 400 1vmax "Roboto";
+  }
+
+  .bookingForm {
+    padding: 1vmax 2vmax;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 3vmax;
+    transition: all 0.5s;
+  }
+}

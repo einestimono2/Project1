@@ -2,7 +2,7 @@
   margin: auto;
   text-align: center;
   padding: 10vmax;
-  height: 60vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,4 +35,26 @@
 .bookingSuccess > a:hover {
   background-color: rgba(23, 22, 22, 0.903);
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .bookingSuccess {
+    padding: 8vmax;
+    height: 85vh;
+  }
+
+  .bookingSuccess > a {
+    padding: 3vw 6vw;
+    font: 400 4vw "Roboto";
+    margin: 2vmax;
+  }
+
+  .bookingSuccess > svg {
+    font-size: 30vw;
+  }
+
+  .bookingSuccess > p {
+    margin: 2vmax;
+    font-size: 2.5vmax !important;
+  }
 }

@@ -186,7 +186,7 @@ const ReviewList = () => {
             </Button>
           </form>
 
-          {reviews && reviews.length > 0 ? (
+          {reviews && reviews.length > 0 && roomID !== "" ? (
             <DataGrid
               rows={rows}
               columns={columns}

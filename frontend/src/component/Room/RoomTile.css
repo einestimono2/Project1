@@ -52,3 +52,17 @@
   color: gray;
   font: 500 0.8vmax cursive;
 }
+
+@media screen and (max-width: 600px) {
+  .roomTile {
+    height: 4vh;
+  }
+
+  .roomTile > div > div > p:first-child {
+    font: bold 0.75vmax "Roboto";
+  }
+
+  .roomTile > div > div > p:last-child {
+    font: 500 0.65vmax cursive;
+  }
+}

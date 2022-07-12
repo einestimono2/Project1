@@ -62,8 +62,12 @@ const Booking = () => {
             <img src={room.images[0].url} alt="ssa" />
             <div>
               <Link to={`/room/${room._id}`}>{`Mã phòng: ${room._id}`}</Link>
-              <span>{`Địa chỉ: ${room.address}`}</span>
-              <span>{`Giá: ${room.price?.toLocaleString("en-US")} VNĐ`}</span>
+              {window.innerWidth >= 600 && (
+                <span>{`Địa chỉ: ${room.address}`}</span>
+              )}
+              {window.innerWidth >= 600 && (
+                <span>{`Giá: ${room.price?.toLocaleString("en-US")} VNĐ`}</span>
+              )}
             </div>
           </div>
           <div className="bookingNumOfRooms">

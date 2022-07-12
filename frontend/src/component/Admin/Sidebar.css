@@ -56,3 +56,9 @@
   color: tomato;
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 600px) {
+  .MuiTreeItem-content > div:last-child {
+    font-size: 1rem !important;
+  }
+}

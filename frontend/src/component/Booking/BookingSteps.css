@@ -15,3 +15,17 @@
 .MuiStepConnector-completed {
   background-color: tomato;
 }
+
+@media screen and (max-width: 600px) {
+  .BookingSteps {
+    margin-top: 6vh;
+  }
+
+  .MuiStepper-root {
+    padding: 3vmax 0 5vmax 0 !important;
+  }
+
+  .MuiTypography-body1 {
+    font: 400 1.5vmax "Roboto" !important;
+  }
+}

@@ -42,7 +42,7 @@ header > ul > li {
   display: inline-block;
   padding: 0 1vmax;
   font-size: 1.05vmax;
-  font-family: Roboto;
+  font-family: "Roboto";
   position: relative;
   transition: all 1s;
 }
@@ -111,10 +111,6 @@ header > ul > li > a:hover {
   width: 5vmax;
 }
 
-/* .MuiSpeedDialAction-staticTooltipLabel {
-  background-color: rgba(255, 255, 255, 0.343) !important;
-} */
-
 .MuiFab-primary {
   background-color: transparent !important;
 }
@@ -125,4 +121,35 @@ header > ul > li > a:hover {
 
 .MuiSpeedDial-root {
   z-index: 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 6vh;
+  }
+
+  .logo > h1 > a {
+    font-size: 2.5vmax;
+  }
+
+  a {
+    font-size: 1.5vmax;
+  }
+
+  .btnDN {
+    flex: 2;
+    font-size: 1vmax;
+  }
+
+  .speedDialIcon {
+    width: 8vw;
+    height: 8vw;
+
+    border-radius: 100%;
+  }
+
+  .speedDial {
+    right: 9vw;
+    top: 0.5vh;
+  }
 }

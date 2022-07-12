@@ -694,77 +694,81 @@ const Statistics = () => {
 
       <div className="dashboard">
         <SideBar />
-        <div className="roomListContainer">
-          <h1 id="roomListHeading">THỐNG KÊ</h1>
+        <div className="statisticContainer">
+          <h1>THỐNG KÊ</h1>
 
           <div className="statisticTitle">
-            <label>
-              Tiêu chí
-              <select
-                onChange={(e) => {
-                  setShow(false);
-                  setStatistic(e.target.value);
-                }}
-              >
-                <option value="">-- Chọn tiêu chí thống kê --</option>
-                {statistics.map((statistic) => (
-                  <option key={statistic} value={statistic}>
-                    {statistic}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div>
+              <label>
+                Tiêu chí
+                <select
+                  onChange={(e) => {
+                    setShow(false);
+                    setStatistic(e.target.value);
+                  }}
+                >
+                  <option value="">-- Chọn tiêu chí --</option>
+                  {statistics.map((statistic) => (
+                    <option key={statistic} value={statistic}>
+                      {statistic}
+                    </option>
+                  ))}
+                </select>
+              </label>
 
-            <label>
-              Loại
-              <select
-                onChange={(e) => {
-                  setShow(false);
-                  setType(e.target.value);
-                }}
-              >
-                {statistic === "Danh sách phòng"
-                  ? type1.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))
-                  : statistic === "Danh sách đặt phòng"
-                  ? type2.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))
-                  : statistic === "Danh sách người dùng"
-                  ? type3.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))
-                  : ""}
-              </select>
-            </label>
+              <label>
+                Loại
+                <select
+                  onChange={(e) => {
+                    setShow(false);
+                    setType(e.target.value);
+                  }}
+                >
+                  {statistic === "Danh sách phòng"
+                    ? type1.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))
+                    : statistic === "Danh sách đặt phòng"
+                    ? type2.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))
+                    : statistic === "Danh sách người dùng"
+                    ? type3.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))
+                    : ""}
+                </select>
+              </label>
 
-            <label>
-              Thời gian
-              <select
-                required
-                onChange={(e) => {
-                  setShow(false);
-                  setTime(e.target.value);
-                }}
-              >
-                {times.map((time) => (
-                  <option key={time} value={time}>
-                    {time}
-                  </option>
-                ))}
-              </select>
-            </label>
+              <label>
+                Thời gian
+                <select
+                  required
+                  onChange={(e) => {
+                    setShow(false);
+                    setTime(e.target.value);
+                  }}
+                >
+                  {times.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
 
-            <div onClick={statisticHandler}>Thống kê</div>
+            <div>
+              <div onClick={statisticHandler}>Thống kê</div>
 
-            <div onClick={exportHandler}>Xuất Excel</div>
+              <div onClick={exportHandler}>Xuất Excel</div>
+            </div>
           </div>
 
           {show && (

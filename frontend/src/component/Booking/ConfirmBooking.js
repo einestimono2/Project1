@@ -81,10 +81,14 @@ const ConfirmBooking = () => {
                   <Link to={`/room/${state.room._id}`}>
                     Mã phòng: {state.room._id}
                   </Link>
-                  <span>{`Địa chỉ: ${state.room.address}`}</span>
-                  <span>{`Giá: ${state.room.price?.toLocaleString(
-                    "en-US"
-                  )} VNĐ`}</span>
+                  {window.innerWith >= 600 && (
+                    <span>{`Địa chỉ: ${state.room.address}`}</span>
+                  )}
+                  {window.innerWith >= 600 && (
+                    <span>{`Giá: ${state.room.price?.toLocaleString(
+                      "en-US"
+                    )} VNĐ`}</span>
+                  )}
                 </div>
               </div>
             </div>

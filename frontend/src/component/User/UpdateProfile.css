@@ -109,3 +109,47 @@
 .updateProfileBtn:hover {
   background-color: rgb(179, 66, 46);
 }
+
+@media screen and (max-width: 600px) {
+  .updateProfileContainer {
+    margin-top: 6vmax;
+    background-color: white;
+  }
+
+  .updateProfileBox {
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .updateProfileBox > h2 {
+    font: bold 2.5vmax "Roboto";
+  }
+
+  .updateProfileForm {
+    padding: 5vmax;
+  }
+
+  .updateProfileForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .updateProfileForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #updateProfileImage > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #updateProfileImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  .updateProfileBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+}

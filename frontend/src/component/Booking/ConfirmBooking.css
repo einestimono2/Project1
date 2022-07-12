@@ -180,3 +180,81 @@
   background-color: rgb(192, 71, 50);
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 600px) {
+  .confirmBookingContainer {
+    padding: 3vmax auto;
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+
+  .confirmBookingContainer > div:last-child {
+    border-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.247);
+  }
+
+  .confirmBookingArea:first-child {
+    padding: 0;
+  }
+
+  .confirmBookingArea:not(:first-child) {
+    padding: 3vmax 0;
+    padding-bottom: 0%;
+  }
+
+  .confirmBookingArea > p,
+  .confirmRoomBooked > p {
+    font: bold 2vmax "Roboto" !important;
+  }
+
+  .confirmBookingAreaBox > div {
+    display: flex;
+    margin: 6vw 0;
+  }
+
+  .confirmBookingAreaBox > div > p {
+    font: 400 3vw "Roboto";
+  }
+  .confirmBookingAreaBox > div > span {
+    font: 100 3vw "Roboto";
+  }
+
+  .confirmRoomBooked {
+    padding: 3vmax 0 0 0;
+  }
+
+  .confirmRoomBooked > div {
+    margin-bottom: 2vmax !important;
+  }
+
+  .confirmRoomBooked > div > p {
+    font: 400 3vw "Roboto";
+  }
+  .confirmRoomBooked > div > span {
+    font: 100 3vw "Roboto";
+  }
+
+  .orderSummary {
+    padding: 12vw;
+  }
+
+  .orderSummary > p {
+    font: 400 6vw "Roboto";
+    padding: 4vw;
+  }
+
+  .orderSummary > div > div {
+    font: 300 4vw "Roboto";
+  }
+
+  .orderSummaryTotal {
+    font: 300 4vw "Roboto";
+    padding: 5vw 0;
+  }
+
+  .orderSummary > button {
+    padding: 4vw;
+    margin: 4vw auto;
+    font: 400 4vw "Roboto";
+  }
+}

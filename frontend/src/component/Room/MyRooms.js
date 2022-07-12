@@ -86,7 +86,7 @@ const MyRooms = () => {
     {
       field: "actions",
       headerName: "Hành động",
-      minWidth: 160,
+      minWidth: 210,
       type: "number",
       flex: 1,
       sortable: false,

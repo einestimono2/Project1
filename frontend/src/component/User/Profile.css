@@ -23,11 +23,12 @@
   color: rgba(0, 0, 0, 0.555);
   font: 600 2.2vmax "Roboto";
   transform: translateY(-2vmax);
+  margin-bottom: 1vh;
 }
 
 .profileContainer > div:first-child > img {
-  width: 20vmax;
-  height: 20vmax;
+  width: 26vmax;
+  height: 26vmax;
   border-radius: 100%;
   transition: all 0.5s;
   object-fit: cover;
@@ -100,4 +101,49 @@
   background-color: rgb(31, 31, 31);
   transform: scale(1.01);
   color: crimson;
+}
+
+@media screen and (max-width: 600px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profileContainer > div:first-child {
+    margin-top: 8vmax;
+  }
+
+  .profileContainer > div:first-child > h1 {
+    font: bold 3.2vmax "Roboto";
+    transform: translateY(-2vmax);
+  }
+
+  .profileContainer > div:first-child > a {
+    font: 400 1.5vmax "Roboto";
+    padding: 1vmax;
+  }
+
+  .profileContainer > div:last-child {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profileContainer > div:last-child > div > h4 {
+    font: 400 2vmax "Roboto";
+  }
+
+  .profileContainer > div:last-child > div > p {
+    font: 400 1.5vmax cursive;
+    margin: 0.5vmax 0;
+  }
+
+  .profileContainer > div:last-child > div:last-child > a {
+    font: 400 1.5vmax "Roboto";
+    padding: 1vmax;
+    margin: 1vmax 0;
+  }
+
+  .profileContainer > div:first-child > img {
+    width: 20vmax;
+    height: 20vmax;
+  }
 }

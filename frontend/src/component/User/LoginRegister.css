@@ -193,3 +193,39 @@
 .shiftToRight {
   transform: translateX(100%);
 }
+@media screen and (max-width: 600px) {
+  .LoginRegisterBox {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 30%;
+    height: 30%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0.75vw;
+  }
+
+  .login_signUp_toggle {
+    height: 2vmax;
+  }
+
+  .LoginRegisterBox > div > button {
+    height: 0.25vh;
+  }
+
+  .addImage > svg {
+    font-size: 0.75vmax;
+    transform: translateX(0.75vw) translateY(-2vw);
+  }
+
+  .shiftToNeutral {
+    transform: translateX(0%) translateY(-500%);
+  }
+
+  .shiftToRight {
+    transform: translateX(100%) translateY(-500%);
+  }
+
+  .loginForm > div > .suffix,
+  .signUpForm > div > .suffix {
+    transform: translateX(12vmax) translateY(-0.65vmax);
+  }
+}

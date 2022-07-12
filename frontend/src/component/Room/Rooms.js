@@ -186,7 +186,9 @@ const Rooms = () => {
           <MetaData title={"Danh sách phòng"} />
 
           <div className="filterContainer">
-            <div onClick={submitCategoryToggle}>{category}</div>
+            <div onClick={submitCategoryToggle}>
+              <span>{category}</span>
+            </div>
             <div onClick={submitAddressToggle}>
               <span>{address}</span>
             </div>
@@ -197,10 +199,14 @@ const Rooms = () => {
               </span>
             </div>
             <div onClick={submitAreaToggle}>
-              {area[0]} - {area[1]} &#13217;
+              <span>
+                {area[0]} - {area[1]} &#13217;
+              </span>
             </div>
             <div onClick={submitRatingToggle}>
-              {rating[0]} - {rating[1]} &#9734;
+              <span>
+                {rating[0]} - {rating[1]} &#9734;
+              </span>
             </div>
             <div onClick={filterHandler}>Tìm kiếm</div>
           </div>

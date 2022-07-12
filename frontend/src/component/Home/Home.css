@@ -79,3 +79,21 @@
   background-color: rgb(32, 30, 30);
   color: crimson;
 }
+
+@media screen and (max-width: 600px) {
+  .mapboxContainer {
+    height: 92vh;
+    top: 6vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .homeHeading {
+    margin-top: 7.5vmax;
+  }
+
+  .listContainer {
+    margin: 2vmax 4vmax;
+    min-height: 38.5vh;
+  }
+}

@@ -112,7 +112,7 @@ function Header({ user }) {
                 icon={item.icon}
                 tooltipTitle={item.name}
                 onClick={item.func}
-                tooltipOpen={window.innerWidth <= 600 ? false : true}
+                tooltipOpen={false}
               />
             ))}
           </SpeedDial>

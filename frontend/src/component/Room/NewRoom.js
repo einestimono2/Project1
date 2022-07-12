@@ -44,7 +44,7 @@ const NewRoom = () => {
     }
 
     if (success) {
-      alert.success("Room Created Successfully");
+      alert.success("Đăng thành công. Chờ QTV phê duyệt!");
       navigate("/");
       dispatch({ type: NEW_ROOM_RESET });
     }

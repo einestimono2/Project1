@@ -339,7 +339,7 @@ const MyBookings = () => {
       field: "actions",
       flex: 1,
       headerName: "Actions",
-      minWidth: 170,
+      minWidth: 210,
       type: "number",
       sortable: false,
       renderCell: (params) => {

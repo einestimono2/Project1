@@ -51,3 +51,28 @@
 .MuiDataGrid-iconSeparator {
   display: none !important;
 }
+
+@media screen and (max-width: 600px) {
+  .myBookingsPage {
+    padding: 0;
+    height: 90vh;
+  }
+
+  #myBookingsHeading {
+    font: bold 2.5vmax "Roboto";
+    padding: 4vw;
+    width: 50%;
+  }
+
+  .myBookingsTable div {
+    font: 300 3vw "Roboto";
+  }
+
+  .MuiDataGrid-columnHeader {
+    padding: 20px !important;
+  }
+
+  .MuiDataGrid-columnHeader div {
+    font: bold 3.5vw "Roboto" !important;
+  }
+}

@@ -14,7 +14,7 @@ const Footer = () => {
       </div>
 
       <div className="midFooter">
-        <h1>WEBSITE ĐĂNG TIN ĐẶT PHÒNG</h1>
+        <h1>WEBSITE ĐĂNG TIN & ĐẶT PHÒNG</h1>
         <p>_______</p>
         <p>Copyrights 2022 &copy; Group 01</p>
       </div>

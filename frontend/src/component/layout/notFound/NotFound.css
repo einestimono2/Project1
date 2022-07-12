@@ -35,3 +35,21 @@
   background-color: rgb(32, 30, 30);
   color: crimson;
 }
+
+@media screen and (max-width: 600px) {
+  .PageNotFound {
+    height: 81vh;
+  }
+
+  .PageNotFound > svg {
+    font-size: 10vmax;
+  }
+
+  .PageNotFound > p {
+    font-size: 3vmax;
+  }
+
+  .PageNotFound > a {
+    font-size: 2vmax;
+  }
+}

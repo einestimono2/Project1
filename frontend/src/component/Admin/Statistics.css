@@ -1,45 +1,75 @@
+.statisticContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.statisticContainer > h1 {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 4rem auto 2rem auto;
+  text-align: center;
+  width: 20%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
 .statisticTitle {
   /* padding: 0 3vmax; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   height: 10vh;
 }
 
-.statisticTitle > label {
+.statisticTitle > div {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+}
+
+.statisticTitle > div > label {
   width: 15vmax;
   margin-right: 3vmax;
   justify-content: center;
   margin-bottom: 3vh;
 }
 
-.statisticTitle > label > select {
+.statisticTitle > div > label > select {
   width: 100%;
 }
 
-.statisticTitle > div {
+.statisticTitle > div > div {
   text-align: center;
   width: 9vmax;
-  /* height: 50%; */
-  padding: 1.5vh 0;
-  border-radius: 0.25vmax;
+  margin-top: 1vh;
+  height: 20%;
+  padding: 2vh 0;
+  border-radius: 0.5vmax;
   color: white;
   background-color: rgb(29, 180, 231);
   cursor: pointer;
   transition: all 0.5s;
 }
 
-.statisticTitle > div:not(:last-child):hover {
+.statisticTitle > div > div:not(:last-child):hover {
   background-color: rgb(30, 133, 168);
 }
 
-.statisticTitle > div:last-child {
+.statisticTitle > div > div:last-child {
   margin-left: 1vmax;
   background-color: rgb(96, 127, 34);
 }
 
-.statisticTitle > div:last-child:hover {
+.statisticTitle > div > div:last-child:hover {
   background-color: rgb(136, 184, 39);
 }
 
@@ -60,4 +90,32 @@
   background-color: aquamarine;
   text-align: center;
   padding: 0.75vmax 0;
+}
+
+@media screen and (max-width: 600px) {
+  .statisticContainer > h1 {
+    width: 40%;
+    font: 400 1.5rem "Roboto";
+  }
+
+  .statisticTitle {
+    margin-top: 3vmax;
+    margin-bottom: 8vmax;
+    flex-direction: column;
+  }
+
+  .statisticTitle > div > label {
+    margin-right: 1vmax;
+    font: 500 1.5vmax "Roboto";
+  }
+
+  .statisticTitle > div > label > select {
+    padding: 1vmax 0vmax;
+    font: 500 1.35vmax cursive;
+  }
+
+  .statisticTitle > div > div {
+    font: 600 1.5vmax "Roboto";
+    height: 22%;
+  }
 }

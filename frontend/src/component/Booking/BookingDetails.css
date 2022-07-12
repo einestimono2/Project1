@@ -30,3 +30,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+  .bookingDetailsPage > h1 {
+    font: bold 2vmax "Roboto" !important;
+  }
+
+  .confirmRoomBooked {
+    width: 100% !important;
+  }
+}
