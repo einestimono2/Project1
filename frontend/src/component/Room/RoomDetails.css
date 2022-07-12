@@ -79,6 +79,10 @@
   background-color: gray;
 }
 
+.containerPosterInfor > a {
+  padding: 0;
+}
+
 .containerPosterInfor > button {
   width: 100%;
   margin-top: 1.75vmax;

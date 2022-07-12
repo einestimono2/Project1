@@ -51,10 +51,11 @@
   align-items: flex-start;
   box-sizing: border-box;
 }
+
 .CartItemCard > img {
   width: 5vmax;
-  max-height: 5vmax;
-  min-height: 5vmax;
+  max-height: 100%;
+  min-height: 100%;
 }
 
 .CartItemCard > div {

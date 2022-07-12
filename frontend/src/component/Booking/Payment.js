@@ -18,6 +18,7 @@ import {
 import { createBooking, clearErrors } from "../../actions/bookingAction";
 import MetaData from "../layout/MetaData";
 import BookingSteps from "./BookingSteps";
+import Loading from "../layout/loading/loading";
 
 import CreditCardIcon from "@material-ui/icons/CreditCard";
 import EventIcon from "@material-ui/icons/Event";
@@ -34,6 +35,7 @@ const Payment = () => {
 
   const payments = ["Thanh toán sau", "Thanh toán online"];
   const [paymentType, setPaymentType] = useState("Thanh toán sau");
+  const [paying, setPaying] = useState(false);
 
   const { user } = useSelector((state) => state.user);
   const { error } = useSelector((state) => state.newBooking);
@@ -62,6 +64,7 @@ const Payment = () => {
       alert.success("Đặt phòng thành công");
       navigate("/booking/success");
     } else {
+      setPaying(true);
       try {
         const config = {
           headers: {
@@ -77,7 +80,10 @@ const Payment = () => {
 
         const client_secret = data.client_secret;
 
-        if (!stripe || !elements) return;
+        if (!stripe || !elements) {
+          setPaying(false);
+          return;
+        }
 
         const result = await stripe.confirmCardPayment(client_secret, {
           payment_method: {
@@ -91,6 +97,7 @@ const Payment = () => {
         });
 
         if (result.error) {
+          setPaying(false);
           payBtn.current.disabled = false;
 
           alert.error(result.error.message);
@@ -105,12 +112,15 @@ const Payment = () => {
 
             dispatch(createBooking(booking));
             alert.success("Đặt phòng thành công");
+            setPaying(false);
             navigate("/booking/success");
           } else {
+            setPaying(false);
             alert.error("Có lỗi xảy ra, vui lòng thử lại");
           }
         }
       } catch (error) {
+        setPaying(false);
         payBtn.current.disabled = false;
         alert.error(error.response.data.message);
       }
@@ -130,6 +140,7 @@ const Payment = () => {
       <BookingSteps activeStep={2} />
 
       <div className="paymentContainer">
+        {paying && <Loading backgroundColor={"transparent"} />}
         <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
           <label>
             Hình thức thanh toán
