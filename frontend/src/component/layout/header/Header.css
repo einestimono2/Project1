@@ -19,16 +19,13 @@ header {
 .logo {
   flex: 1;
   font-family: Chilanka;
-}
-
-.logo > h1 {
-  font-size: 1.5vmax;
+  text-align: center;
 }
 
 a {
-  /* text-transform: uppercase; */
   font-weight: bold;
   color: #555;
+  padding: 1vh 0;
 }
 
 header > ul {
@@ -128,12 +125,12 @@ header > ul > li > a:hover {
     height: 6vh;
   }
 
-  .logo > h1 > a {
-    font-size: 2.5vmax;
+  .logo > center > h1 > a {
+    font-size: 2.25vmax;
   }
 
   a {
-    font-size: 1.5vmax;
+    font-size: 1.25vmax;
   }
 
   .btnDN {

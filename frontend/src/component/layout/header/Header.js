@@ -69,9 +69,11 @@ function Header({ user }) {
   return (
     <header>
       <div className="logo">
-        <h1>
-          <Link to="/">RR</Link>
-        </h1>
+        <center>
+          <h1>
+            <Link to="/">GR1</Link>
+          </h1>
+        </center>
       </div>
 
       <ul className="ul" style={{ marginRight: user ? "17vw" : "1vw" }}>

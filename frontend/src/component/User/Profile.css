@@ -23,12 +23,12 @@
   color: rgba(0, 0, 0, 0.555);
   font: 600 2.2vmax "Roboto";
   transform: translateY(-2vmax);
-  margin-bottom: 1vh;
+  margin-bottom: 0.5vh;
 }
 
 .profileContainer > div:first-child > img {
-  width: 26vmax;
-  height: 26vmax;
+  width: 20vmax;
+  height: 20vmax;
   border-radius: 100%;
   transition: all 0.5s;
   object-fit: cover;
@@ -45,7 +45,7 @@
   text-decoration: none;
   padding: 0.5vmax;
   width: 30%;
-  margin: 4vmax 4vmax 1vmax 4vmax;
+  margin: 3vmax 4vmax 1vmax 4vmax;
   text-align: center;
   transition: all 0.5s;
   border-radius: 0.25vmax;
