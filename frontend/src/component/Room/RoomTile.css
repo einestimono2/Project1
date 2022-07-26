@@ -1,0 +1,68 @@
+.roomTile {
+  display: flex;
+  height: 10vh;
+  width: 95%;
+  margin-left: 0.25vw;
+  padding-left: 0.5vw;
+  padding-bottom: 0.5vw;
+  margin-bottom: 1.5vmax;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.507);
+}
+
+.roomTile > img {
+  width: 20% !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roomTile > div {
+  margin-left: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+}
+
+.roomTile > div > p:first-child {
+  color: black;
+  font: bold 1vmax "Roboto";
+  margin-bottom: 0.5vmax;
+  /**/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.roomTile > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.roomTile > div > div > p:first-child {
+  color: crimson;
+  font: bold 1vmax "Roboto";
+}
+
+.roomTile > div > div > p:last-child {
+  color: gray;
+  font: 500 0.8vmax cursive;
+}
+
+@media screen and (max-width: 600px) {
+  .roomTile {
+    height: 4vh;
+  }
+
+  .roomTile > div > div > p:first-child {
+    font: bold 0.75vmax "Roboto";
+  }
+
+  .roomTile > div > div > p:last-child {
+    font: 500 0.65vmax cursive;
+  }
+}

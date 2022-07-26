@@ -1,0 +1,43 @@
+.roomCardMore {
+  width: 16vmax;
+  height: 30vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  position: relative;
+  background-image: linear-gradient(
+    rgba(206, 196, 196, 0.569),
+    rgba(206, 196, 196, 0.174),
+    rgba(251, 250, 250, 0.659)
+  );
+}
+
+.roomCardMore:hover {
+  box-shadow: 0 0 5px grey;
+  transform: translateY(-1vmax);
+}
+
+.roomCardMore > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.roomCardMore > div > span {
+  color: black;
+  font: bold 1vmax cursive;
+  margin-bottom: 1vh;
+}
+
+.roomCardMore > div > i {
+  width: 5vmax;
+  height: 5vmax;
+  background: url(../../assets/images/view-more-icon.jpg) center no-repeat;
+  background-size: contain;
+  display: inline-block;
+}

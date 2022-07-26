@@ -1,0 +1,101 @@
+.roomListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#roomListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 4rem 2rem 2rem 2rem;
+  text-align: center;
+}
+
+.exportExcel {
+  position: absolute;
+  top: 9.5%;
+  right: 1%;
+  text-align: center;
+  width: 9vmax;
+  margin-top: 1vh;
+  padding: 1.65vh 0;
+  border-radius: 0.5vmax;
+  color: white;
+  background-color: rgb(96, 127, 34);
+  cursor: pointer;
+  transition: all 0.5s;
+  font: 500 1vmax "Roboto";
+}
+
+.exportExcel:hover {
+  background-color: rgb(136, 184, 39);
+}
+
+.roomListTable {
+  background-color: white;
+  border: none !important;
+}
+
+.roomListTable div {
+  font: 500 1vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678);
+  border: none !important;
+}
+
+.roomListTable a,
+.roomListTable button {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.roomListTable a:hover {
+  color: tomato;
+}
+
+.roomListTable button:hover {
+  color: rgb(236, 30, 30);
+}
+
+.MuiDataGrid-columnHeader div {
+  color: rgb(255, 255, 255);
+}
+
+.MuiDataGrid-columnHeaderWrapper {
+  background-color: rgba(255, 0, 0, 0.759);
+}
+
+.roomListTable button {
+  display: inline-block;
+}
+
+.MuiDataGrid-footerContainer {
+  justify-content: center !important;
+}
+
+.MuiDataGrid-root {
+  margin-bottom: 1vmax;
+}
+
+@media screen and (max-width: 600px) {
+  #roomListHeading {
+    font: 400 1.5rem "Roboto";
+  }
+
+  .roomListTable div {
+    font: 300 4vw "Roboto";
+  }
+
+  .exportExcel {
+    top: 80%;
+    width: 7vmax;
+  }
+}

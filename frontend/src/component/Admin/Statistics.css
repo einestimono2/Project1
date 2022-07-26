@@ -1,0 +1,196 @@
+.statisticContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.statisticContainer > h1 {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 4rem auto 2rem auto;
+  text-align: center;
+  width: 20%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+.statisticTitle {
+  /* padding: 0 3vmax; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+}
+
+.statisticTitle > div:first-child {
+  width: 80%;
+}
+
+.statisticTitle > div {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+}
+
+.statisticTitle > div > label {
+  width: 15vmax;
+  margin-right: 3vmax;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.statisticTitle > div > label > select {
+  width: 100%;
+}
+
+.statisticTitle > div > label > div {
+  margin-top: 0.75vh;
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgba(0, 0, 0, 0.267);
+  border-radius: 0.25vmax;
+  padding: 0.55vmax;
+  display: flex;
+  justify-content: space-between;
+  background-color: none;
+}
+
+.statisticTitle > div > label > div > i {
+  width: 1.5vw;
+  height: 1.275vw;
+  background: url(../../assets/images/clear.svg) center no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.statisticTitle > div > label > div > span {
+  width: 100%;
+  margin: auto 0.25vmax;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.statisticTitle > div > button {
+  text-align: center;
+  width: 9vmax;
+  margin-top: 1.5vh;
+  height: 60%;
+  padding: 1.65vh 0;
+  border-radius: 0.5vmax;
+  color: white;
+  background-color: rgb(29, 180, 231);
+  cursor: pointer;
+  transition: all 0.5s;
+  font: 500 1vmax "Roboto";
+}
+
+.statisticTitle > div > button:not(:last-child):hover {
+  background-color: rgb(30, 133, 168);
+}
+
+.statisticTitle > div > button:last-child {
+  margin-left: 1vmax;
+  background-color: rgb(96, 127, 34);
+}
+
+.statisticTitle > div > button:last-child:hover {
+  background-color: rgb(136, 184, 39);
+}
+
+.statisticTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1.5vmax;
+  height: 5vh;
+}
+
+.statisticTotal > div {
+  width: 20%;
+  display: block;
+  justify-content: center;
+  font: bold 1vmax "Roboto";
+  color: crimson;
+  background-color: aquamarine;
+  text-align: center;
+  padding: 0.75vmax 0;
+}
+
+.MuiDialogContent-root > label > div {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.MuiDialogContent-root > label:last-child {
+  margin-bottom: 1vmax;
+}
+
+.MuiDialogContent-root > label:first-child {
+  margin-bottom: 2vmax;
+}
+
+.statisticsView {
+  display: flex;
+  justify-content: space-around;
+  margin: 3vmax 3vmax 0.5vmax 3vmax;
+}
+
+.statisticsView > div:first-child {
+  margin-right: 3vmax;
+  padding: 0 1vmax 1vmax 0;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .statisticContainer > h1 {
+    width: 40%;
+    font: 400 1.5rem "Roboto";
+  }
+
+  .statisticTitle {
+    margin-top: 3vmax;
+    margin-bottom: 8vmax;
+    flex-direction: column;
+  }
+
+  .statisticTitle > div > label {
+    margin-right: 1vmax;
+    font: 500 1.5vmax "Roboto";
+  }
+
+  .statisticTitle > div > label > select {
+    padding: 1vmax 0vmax;
+    font: 500 1.35vmax cursive;
+  }
+
+  .statisticTitle > div > button {
+    font: 600 1.5vmax "Roboto";
+    padding: 1vh 0;
+    height: 80%;
+  }
+
+  .statisticsView {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .statisticsView > div:first-child {
+    margin-bottom: 4vmax;
+    height: 50%;
+    overflow: auto;
+  }
+}
