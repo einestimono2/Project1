@@ -359,7 +359,7 @@ const MyRooms = () => {
             autoHeight
           />
 
-          {bookings && bookings.length > 0 ? (
+          {showBooking && bookings && bookings.length > 0 ? (
             <Fragment>
               <Typography
                 align="center"
